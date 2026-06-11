@@ -4,3 +4,6 @@
 
 /.vs
 /confluence_pages
+/.dependencies/qdrant_storage/collections/wiki_pages
+/src/__pycache__
+/__pycache__

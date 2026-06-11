@@ -78,14 +78,14 @@ class QdrantService:
         query_vector: List[float],
         limit: int = 5
     ):
-        results = self.client.search(
+        results = self.client.query_points(
             collection_name=collection_name,
-            query_vector=query_vector,
+            query=query_vector,
             limit=limit
         )
 
         output = []
-        for r in results:
+        for r in results.points:
             output.append({
                 "id": r.id,
                 "score": r.score,
